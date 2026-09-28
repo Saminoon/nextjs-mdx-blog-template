@@ -63,7 +63,7 @@ export function Hero() {
             className="flex flex-wrap items-center gap-4"
           >
             <Button asChild size="lg" className="relative overflow-hidden">
-              <Link href="/posts">
+              <Link href="/blog">
                 <span className="relative z-10">Read the Guides</span>
               </Link>
             </Button>
@@ -73,7 +73,7 @@ export function Hero() {
               size="lg"
               className="relative overflow-hidden"
             >
-              <Link href="/category/builds">
+              <Link href="/projects">
                 <span className="relative z-10">View PC Builds</span>
               </Link>
             </Button>
