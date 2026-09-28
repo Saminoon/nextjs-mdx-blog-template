@@ -19,13 +19,16 @@ import {
 } from '@/components/ui/card'
 
 export const metadata: Metadata = {
-  description: 'Welcome to Next.js MDX Blog - A modern blog template',
+  title: 'Silicon Tuning | PC Hardware & Optimization',
+  description:
+    'Deep dives into CPU and GPU pairing, memory frequency tuning, BIOS configurations, and system performance.',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    siteName: 'Next.js MDX Blog',
-    url: 'https://example.com',
-    description: 'A modern blog template built with Next.js and MDX',
+    siteName: 'Silicon Tuning',
+    url: 'https://silicontuning.com', // Update with your eventual domain
+    description:
+      'PC hardware reviews, custom build guides, and system optimization tutorials.',
   },
 }
 
@@ -37,12 +40,13 @@ export default async function Home() {
   const websiteJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Next.js MDX Blog',
-    url: 'https://example.com',
-    description: 'A modern blog template built with Next.js and MDX',
+    name: 'Silicon Tuning',
+    url: 'https://silicontuning.com',
+    description:
+      'Deep dives into CPU and GPU pairing, memory frequency tuning, and BIOS configurations.',
     author: {
       '@type': 'Person',
-      name: 'Your Name',
+      name: 'Rana Muhammad Sami Noon',
     },
   }
 
@@ -57,10 +61,10 @@ export default async function Home() {
             variants={fadeInSlideUp}
             className="mb-8 flex items-center justify-between"
           >
-            <h2 className="text-3xl font-bold">Latest Blog Posts</h2>
+            <h2 className="text-3xl font-bold">Latest Hardware Guides</h2>
             <Button asChild variant="ghost">
               <Link href="/blog">
-                View all posts <ArrowRight className="ml-2 h-4 w-4" />
+                View all articles <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
           </Animated>
@@ -121,10 +125,10 @@ export default async function Home() {
             variants={fadeInSlideUp}
             className="mb-8 flex items-center justify-between"
           >
-            <h2 className="text-3xl font-bold">Featured Projects</h2>
+            <h2 className="text-3xl font-bold">Featured PC Builds</h2>
             <Button asChild variant="ghost">
               <Link href="/projects">
-                View all projects <ArrowRight className="ml-2 h-4 w-4" />
+                View all builds <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
           </Animated>

@@ -1,81 +1,35 @@
 ---
-title: Getting Started with Next.js
-date: 2024-04-15
-excerpt: A quick introduction to Next.js 14 and its key features for modern web development.
+title: 'The Ultimate BIOS Optimization Guide for Maximum Frame Rates'
+date: '2026-09-29'
+excerpt: 'Stop leaving performance on the table. A complete guide to enabling Re-Size BAR, tuning your memory frequencies, and optimizing your BIOS for stable gaming.'
+tags: ['Guides', 'Motherboards', 'RAM']
 ---
 
-Next.js has become one of the most popular React frameworks for building modern web applications. Let's explore some of its core features.
+If you just built a custom PC, installed Windows, and immediately started downloading games, you are likely leaving a massive amount of performance on the table.
 
-## The App Router
+Before you launch into your first match, you need to dive into the BIOS. Here is exactly what you need to configure to push your hardware to its actual limits.
 
-Next.js 14 introduces the App Router, which provides a file-system based routing approach:
+## 1. Enable XMP/EXPO for RAM Overclocking
 
-```tsx
-// app/page.tsx
-export default function Home() {
-  return <h1>Welcome to my website!</h1>
-}
-```
+By default, high-speed DDR4 or DDR5 RAM will run at standard base speeds (usually 2133MHz or 4800MHz) regardless of what is printed on the box.
 
-## Server Components
+To get the memory frequency you actually paid for:
 
-React Server Components allow you to render components on the server:
+- Reboot and hit **DEL** or **F2** to enter BIOS.
+- Locate the **Extreme Memory Profile (XMP)** or **EXPO** setting.
+- Change it from Disabled to **Profile 1**.
+- _Note: If you want to manually tighten your RAM timings for better 1% low framerates in competitive titles like Apex Legends, we will cover advanced memory overclocking in a future guide._
 
-<CodeBlock
-  code={`// app/users/page.tsx
-async function getUsers() {
-    const res = await fetch('https://api.example.com/users')
-    return res.json()
-}
+## 2. Enable Re-Size BAR (Smart Access Memory)
 
-export default async function UsersPage() {
-    const users = await getUsers()
+Re-Size BAR allows your CPU to access the entirety of your GPU's VRAM at once, rather than in small chunks. This can provide a noticeable FPS boost in many modern titles.
 
-    return (
-      <div>
-        <h1>Users</h1>
-        <ul>
-          {users.map((user) => (
-            <li key={user.id}>{user.name}</li>
-          ))}
-        </ul>
-      </div>
-    )
+1. Navigate to your BIOS **Advanced** or **PCIe Subsystem Settings**.
+2. Enable **Above 4G Decoding**.
+3. Set **Re-Size BAR Support** to Auto or Enabled.
 
-}`}
-language="tsx"
-filename="app/users/page.tsx"
-/>
+## Testing the Results
 
-## Data Fetching
+Once you save your BIOS settings and boot into Windows, fire up a hardware monitoring tool like HWiNFO64 to verify your memory frequency. Run a benchmark in a visually demanding engine like Red Dead Redemption 2 to ensure your system remains perfectly stable under load.
 
-<Callout type="info" title="Data Fetching">
-  Next.js simplifies data fetching with built-in functions and patterns.
-</Callout>
-
-Fetch data directly in your components:
-
-```tsx
-// Data fetching in Server Components
-async function getData() {
-  const res = await fetch('https://api.example.com/data')
-  return res.json()
-}
-
-export default async function Page() {
-  const data = await getData()
-  return <main>{/* Use data */}</main>
-}
-```
-
-## Styling Options
-
-Next.js supports various styling approaches:
-
-| Approach     | Description                 |
-| ------------ | --------------------------- |
-| CSS Modules  | Locally scoped CSS          |
-| Tailwind CSS | Utility-first CSS framework |
-| CSS-in-JS    | Styled-components, Emotion  |
-
-With these fundamentals, you can build powerful, performance-optimized applications with Next.js.
+Stay tuned for our next guide on custom fan curves and thermal optimization!

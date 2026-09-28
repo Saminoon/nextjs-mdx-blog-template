@@ -37,13 +37,13 @@ export function Hero() {
             >
               <div className="bg-muted inline-block rounded-full px-4 py-1.5">
                 <p className="text-muted-foreground text-sm font-medium">
-                  Starter template
+                  New: The Ultimate 1440p Build Guide
                 </p>
               </div>
             </Animated>
             <Animated variants={fadeInSlideUp} delay={0.5}>
               <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-                Next.js MDX Blog
+                PC Hardware, Explained.
               </h1>
             </Animated>
           </div>
@@ -53,8 +53,8 @@ export function Hero() {
             className="text-muted-foreground max-w-lg text-lg"
           >
             <p>
-              Web developer crafting elegant solutions with modern technologies.
-              Focused on creating impactful digital experiences.
+              Deep dives into CPU and GPU pairing, memory frequency tuning, BIOS
+              configurations, and maximizing system performance.
             </p>
           </Animated>
           <Animated
@@ -63,8 +63,8 @@ export function Hero() {
             className="flex flex-wrap items-center gap-4"
           >
             <Button asChild size="lg" className="relative overflow-hidden">
-              <Link href="https://nextjs-mdx-blog.loke.dev">
-                <span className="relative z-10">Use this template</span>
+              <Link href="/posts">
+                <span className="relative z-10">Read the Guides</span>
               </Link>
             </Button>
             <Button
@@ -73,8 +73,8 @@ export function Hero() {
               size="lg"
               className="relative overflow-hidden"
             >
-              <Link href="https://github.com/loke-dev/nextjs-mdx-blog-template">
-                <span className="relative z-10">Source code</span>
+              <Link href="/category/builds">
+                <span className="relative z-10">View PC Builds</span>
               </Link>
             </Button>
           </Animated>
