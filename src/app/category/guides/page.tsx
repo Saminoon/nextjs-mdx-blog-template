@@ -12,33 +12,31 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 
-export default async function GpusPage() {
-  // Fetch all MDX posts and filter for the 'GPUs' tag
+export default async function GuidesPage() {
   const allPosts = await getAllPosts()
-  const gpuPosts = allPosts.filter((post) => post.tags?.includes('GPUs'))
+  const guidePosts = allPosts.filter((post) => post.tags?.includes('Guides'))
 
   return (
     <div className="container mx-auto px-4 py-24 min-h-[70vh]">
       <Animated variants={fadeInSlideUp} className="mb-8">
         <h1 className="text-4xl font-bold tracking-tight mb-4">
-          Graphics Cards
+          Buying Guides
         </h1>
         <p className="text-lg text-muted-foreground">
-          GPU reviews, architecture deep dives, bottleneck analysis, and buying
-          guides.
+          Comprehensive recommendations for your next PC build or hardware
+          upgrade.
         </p>
       </Animated>
 
-      {/* If no posts are found, show a fallback message. Otherwise, map the cards. */}
-      {gpuPosts.length === 0 ? (
+      {guidePosts.length === 0 ? (
         <Animated variants={fadeInSlideUp} delay={0.2}>
           <p className="text-muted-foreground mt-8 border-l-2 border-primary pl-4">
-            No GPU articles published yet. Check back soon!
+            No buying guides published yet. Check back soon!
           </p>
         </Animated>
       ) : (
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 mt-12">
-          {gpuPosts.map((post, index) => (
+          {guidePosts.map((post, index) => (
             <Animated key={post.slug} variants={scaleIn} delay={index * 0.1}>
               <Card className="flex flex-col overflow-hidden transition-all hover:shadow-md h-full">
                 <CardHeader className="pb-3">

@@ -9,7 +9,7 @@ export const Footer = () => {
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
           <div className="flex flex-col items-center md:items-start">
             <p className="text-muted-foreground text-sm">
-              &copy; {currentYear} Next.js MDX Blog. All rights reserved.
+              &copy; {currentYear} Silicon Tuning. All rights reserved.
             </p>
           </div>
           <div className="flex gap-4">
@@ -30,6 +30,12 @@ export const Footer = () => {
               className="text-muted-foreground hover:text-foreground text-sm"
             >
               Contact
+            </Link>
+            <Link
+              href="/privacy"
+              className="text-muted-foreground hover:text-foreground text-sm"
+            >
+              Privacy Policy
             </Link>
           </div>
         </div>

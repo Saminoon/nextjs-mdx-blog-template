@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'Silicon Tuning',
-    url: 'https://silicontuning.com', // Update with your eventual domain
+    url: 'https://silicontuning.com',
     description:
       'PC hardware reviews, custom build guides, and system optimization tutorials.',
   },
@@ -146,84 +146,6 @@ export default async function Home() {
               </Animated>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="bg-muted/30">
-        <div className="container mx-auto px-4 py-12 md:py-16">
-          <Animated variants={fadeInSlideUp}>
-            <h2 className="mb-8 text-3xl font-bold">Connect With Me</h2>
-          </Animated>
-          <Animated variants={fadeIn} delay={0.2}>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="min-w-[200px]"
-              >
-                <Link
-                  href="https://github.com/yourusername"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg
-                    role="img"
-                    viewBox="0 0 24 24"
-                    className="mr-2 h-5 w-5"
-                    fill="currentColor"
-                  >
-                    <path d={siGithub.path} />
-                  </svg>
-                  GitHub
-                </Link>
-              </Button>
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="min-w-[200px]"
-              >
-                <Link
-                  href="https://twitter.com/yourusername"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg
-                    role="img"
-                    viewBox="0 0 24 24"
-                    className="mr-2 h-5 w-5"
-                    fill="currentColor"
-                  >
-                    <path d={siX.path} />
-                  </svg>
-                  X (Twitter)
-                </Link>
-              </Button>
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="min-w-[200px]"
-              >
-                <Link
-                  href="https://instagram.com/yourusername"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg
-                    role="img"
-                    viewBox="0 0 24 24"
-                    className="mr-2 h-5 w-5"
-                    fill="currentColor"
-                  >
-                    <path d={siInstagram.path} />
-                  </svg>
-                  Instagram
-                </Link>
-              </Button>
-            </div>
-          </Animated>
         </div>
       </section>
     </>

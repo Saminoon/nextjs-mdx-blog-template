@@ -1,243 +1,106 @@
-'use client'
-
-import {
-  BookOpenIcon,
-  CameraIcon,
-  CodeIcon,
-  CoffeeIcon,
-  GlobeIcon,
-  HeartIcon,
-  MountainIcon,
-} from 'lucide-react'
-import {
-  fadeIn,
-  fadeInSlideLeft,
-  fadeInSlideUp,
-  scaleIn,
-} from '@/lib/animations'
+import { fadeInSlideUp, scaleIn } from '@/lib/animations'
 import { Animated } from '@/components/ui/animated'
-import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 import { Badge } from '@/components/ui/badge'
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card'
-import { Separator } from '@/components/ui/separator'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
-export default function About() {
-  const currentYear = new Date().getFullYear()
-  const startYear = 2017
-  const yearsOfExperience = currentYear - startYear
+export const metadata = {
+  title: 'About | Silicon Tuning',
+  description: 'About the author of Silicon Tuning.',
+}
 
-  const skills = [
-    {
-      category: 'Frontend',
-      items: [
-        'React',
-        'Next.js',
-        'TypeScript',
-        'Tailwind CSS',
-        'Shadcn UI',
-        'Framer Motion',
-      ],
-    },
-    {
-      category: 'Backend',
-      items: ['Node.js', 'Express', 'PostgreSQL', 'Prisma', 'tRPC'],
-    },
-    {
-      category: 'DevOps',
-      items: ['Docker', 'CI/CD', 'Cloudflare Workers', 'GitHub Actions'],
-    },
-    { category: 'Tools', items: ['Git', 'VS Code', 'Figma'] },
-  ]
-
-  const interests = [
-    { name: 'Hiking', icon: <MountainIcon className="mr-2 h-4 w-4" /> },
-    { name: 'Photography', icon: <CameraIcon className="mr-2 h-4 w-4" /> },
-    { name: 'Open Source', icon: <GlobeIcon className="mr-2 h-4 w-4" /> },
-    { name: 'Reading', icon: <BookOpenIcon className="mr-2 h-4 w-4" /> },
-    { name: 'Coding', icon: <CodeIcon className="mr-2 h-4 w-4" /> },
-    { name: 'Coffee', icon: <CoffeeIcon className="mr-2 h-4 w-4" /> },
-  ]
-
+export default function AboutPage() {
   return (
-    <Animated variants={fadeIn}>
-      <div className="bg-background">
-        <div className="container mx-auto px-4 py-16 lg:py-20">
-          <Animated
-            variants={fadeInSlideUp}
-            className="grid lg:grid-cols-3 lg:gap-12"
-          >
-            <Animated variants={fadeInSlideLeft} className="space-y-6">
-              <div className="flex flex-col items-center lg:items-start">
-                <Animated variants={scaleIn} delay={0.2}>
-                  <Avatar className="mb-4 h-32 w-32">
-                    <AvatarFallback className="bg-primary text-primary-foreground text-xl">
-                      LC
-                    </AvatarFallback>
-                  </Avatar>
-                </Animated>
-                <Animated variants={fadeInSlideUp} delay={0.3}>
-                  <h1 className="text-3xl font-bold">About</h1>
-                </Animated>
-                <Animated variants={fadeInSlideUp} delay={0.4}>
-                  <p className="text-muted-foreground">
-                    Hi there! This is a modern blog template built with Next.js
-                    and MDX. You can customize this section to tell your story
-                    and share your background with your readers.
-                  </p>
-                </Animated>
+    <div className="container mx-auto px-4 py-24 min-h-[70vh]">
+      <Animated variants={fadeInSlideUp} className="mb-12">
+        <h1 className="text-4xl font-bold tracking-tight mb-4">About Me</h1>
+        <p className="text-lg text-muted-foreground">
+          The hardware enthusiast and developer behind Silicon Tuning.
+        </p>
+      </Animated>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <Animated variants={scaleIn} delay={0.1} className="md:col-span-1">
+          <Card>
+            <CardHeader>
+              <div className="h-24 w-24 rounded-full bg-primary flex items-center justify-center text-primary-foreground text-3xl font-bold mb-4">
+                RN
               </div>
-              <Animated variants={fadeIn} delay={0.5}>
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="text-xl">Quick Info</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div>
-                      <p className="font-medium">Location</p>
-                      <p className="text-muted-foreground">Sweden</p>
-                    </div>
-                    <div>
-                      <p className="font-medium">Experience</p>
-                      <p className="text-muted-foreground">
-                        {yearsOfExperience} years
-                      </p>
-                    </div>
-                    <div>
-                      <p className="font-medium">Focus</p>
-                      <p className="text-muted-foreground">
-                        Web Development & UI/UX
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </Animated>
-            </Animated>
+              <CardTitle>Rana Muhammad Sami Noon</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm text-muted-foreground mb-4">
+                Computer Science student at the University of Portsmouth,
+                frontend developer, and custom PC builder.
+              </p>
+              <div className="space-y-2">
+                <div className="text-sm font-medium">Focus</div>
+                <div className="text-sm text-muted-foreground">
+                  PC Hardware & Web Development
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </Animated>
 
-            <div className="mt-12 space-y-8 lg:col-span-2 lg:mt-0">
-              <Animated variants={fadeInSlideUp} delay={0.2}>
-                <Card>
-                  <CardHeader>
-                    <CardTitle>About Me</CardTitle>
-                    <CardDescription>
-                      Frontend developer with a passion for clean UI and great
-                      UX
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p>
-                      Hi there! I'm a frontend developer with{' '}
-                      {yearsOfExperience} years of experience crafting modern,
-                      responsive, and accessible web applications. My journey in
-                      web development began in 2017, and I've been passionate
-                      about creating exceptional digital experiences ever since.
-                    </p>
-                    <p>
-                      I specialize in building applications with React and
-                      Next.js, leveraging TypeScript for type safety and
-                      Tailwind CSS for beautiful, responsive designs. I'm
-                      particularly enthusiastic about component-driven
-                      development and creating reusable, maintainable UI
-                      systems.
-                    </p>
-                    <p>
-                      Throughout my career, I've worked on projects ranging from
-                      small business websites to complex web applications with
-                      thousands of users. I approach each project with attention
-                      to detail, focusing on performance optimization,
-                      accessibility, and creating intuitive user experiences.
-                    </p>
-                  </CardContent>
-                </Card>
-              </Animated>
+        <Animated
+          variants={fadeInSlideUp}
+          delay={0.2}
+          className="md:col-span-2 space-y-6"
+        >
+          <Card>
+            <CardHeader>
+              <CardTitle>Background</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4 text-muted-foreground">
+              <p>
+                Welcome to Silicon Tuning. I combine my background in computer
+                science with a deep passion for hardware optimization. Whether
+                it is tweaking BIOS settings for rock-solid 1% lows in Apex
+                Legends, tuning memory frequencies, or putting together custom
+                rigs capable of handling demanding engines like Red Dead
+                Redemption 2 without breaking a sweat, I am obsessed with
+                pushing system performance to its limits.
+              </p>
+              <p>
+                When I am not benchmarking GPUs or managing chassis airflow, I
+                work as a frontend developer, building applications and
+                dashboards using tools like React, Next.js, and Python. In fact,
+                this entire blog is a custom Next.js build!
+              </p>
+            </CardContent>
+          </Card>
 
-              <Animated variants={fadeInSlideUp} delay={0.4}>
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Skills</CardTitle>
-                    <CardDescription>
-                      Technical expertise and capabilities
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-6">
-                      {skills.map((skillGroup, index) => (
-                        <Animated
-                          key={index}
-                          variants={fadeIn}
-                          delay={0.2 + index * 0.1}
-                        >
-                          <div>
-                            <h3 className="mb-3 font-medium">
-                              {skillGroup.category}
-                            </h3>
-                            <div className="flex flex-wrap gap-2">
-                              {skillGroup.items.map((skill, skillIndex) => (
-                                <Badge key={skillIndex} variant="secondary">
-                                  {skill}
-                                </Badge>
-                              ))}
-                            </div>
-                            {index < skills.length - 1 && (
-                              <Separator className="mt-4" />
-                            )}
-                          </div>
-                        </Animated>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </Animated>
-
-              <Animated variants={fadeInSlideUp} delay={0.6}>
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Interests</CardTitle>
-                    <CardDescription>
-                      What I enjoy outside of coding
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
-                      {interests.map((interest, index) => (
-                        <Animated
-                          key={index}
-                          variants={scaleIn}
-                          delay={0.2 + index * 0.1}
-                        >
-                          <div className="flex items-center">
-                            {interest.icon}
-                            <span>{interest.name}</span>
-                          </div>
-                        </Animated>
-                      ))}
-                    </div>
-                    <Animated variants={fadeIn} delay={0.8}>
-                      <div className="mt-6">
-                        <p className="flex items-center">
-                          <HeartIcon className="mr-4 h-12 w-12 text-red-500" />
-                          <span>
-                            When I'm not coding, you'll find me exploring new
-                            technologies, contributing to open source, or
-                            seeking inspiration in nature. I believe in
-                            continuous learning and strive to stay at the
-                            forefront of web development trends.
-                          </span>
-                        </p>
-                      </div>
-                    </Animated>
-                  </CardContent>
-                </Card>
-              </Animated>
-            </div>
-          </Animated>
-        </div>
+          <Card>
+            <CardHeader>
+              <CardTitle>Tech & Hardware Skills</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div>
+                <h3 className="text-sm font-medium mb-3">
+                  Hardware & Optimization
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  <Badge variant="secondary">System Assembly</Badge>
+                  <Badge variant="secondary">BIOS Configuration</Badge>
+                  <Badge variant="secondary">RAM Overclocking</Badge>
+                  <Badge variant="secondary">Thermal Tuning</Badge>
+                </div>
+              </div>
+              <div>
+                <h3 className="text-sm font-medium mb-3">
+                  Software Development
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  <Badge variant="secondary">React</Badge>
+                  <Badge variant="secondary">Next.js</Badge>
+                  <Badge variant="secondary">Python</Badge>
+                  <Badge variant="secondary">PostgreSQL</Badge>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </Animated>
       </div>
-    </Animated>
+    </div>
   )
 }
