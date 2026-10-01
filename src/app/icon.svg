@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <!-- Base Chip -->
+  <rect x="32" y="32" width="192" height="192" rx="24" fill="#0f172a" stroke="#38bdf8" stroke-width="8"/>
+  
+  <!-- Top Pins -->
+  <path d="M72 16V32M104 16V32M152 16V32M184 16V32" stroke="#38bdf8" stroke-width="12" stroke-linecap="round" />
+  
+  <!-- Bottom Pins -->
+  <path d="M72 224V240M104 224V240M152 224V240M184 224V240" stroke="#38bdf8" stroke-width="12" stroke-linecap="round" />
+  
+  <!-- Left Pins -->
+  <path d="M16 72H32M16 104H32M16 152H32M16 184H32" stroke="#38bdf8" stroke-width="12" stroke-linecap="round" />
+  
+  <!-- Right Pins -->
+  <path d="M224 72H240M224 104H240M224 152H240M224 184H240" stroke="#38bdf8" stroke-width="12" stroke-linecap="round" />
+  
+  <!-- Inner Silicon Core -->
+  <rect x="80" y="80" width="96" height="96" rx="16" fill="#38bdf8" />
+  
+  <!-- Tuning Gauge Cutout -->
+  <path d="M100 136C100 120.536 112.536 108 128 108C143.464 108 156 120.536 156 136" stroke="#0f172a" stroke-width="12" stroke-linecap="round" fill="none" />
+  
+  <!-- Gauge Needle -->
+  <path d="M128 136L142 118" stroke="#0f172a" stroke-width="12" stroke-linecap="round" />
+  
+  <!-- Center Pin -->
+  <circle cx="128" cy="136" r="6" fill="#0f172a" />
+</svg>

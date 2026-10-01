@@ -13,9 +13,8 @@ import {
 } from '@/components/ui/card'
 
 export const metadata = {
-  title: 'All Articles | Silicon Tuning',
-  description:
-    'The latest guides, reviews, and tutorials for PC hardware and optimization.',
+  title: 'Blog',
+  description: 'Read the latest PC hardware guides and troubleshooting logs.',
 }
 
 export default async function BlogPage() {
