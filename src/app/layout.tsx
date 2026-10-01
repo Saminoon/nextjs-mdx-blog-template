@@ -27,33 +27,37 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: 'Next.js MDX Blog',
-    template: '%s | Next.js MDX Blog',
+    default: 'Silicon Tuning',
+    template: '%s | Silicon Tuning',
   },
+  // Note: Update this URL to your actual Vercel domain later (e.g., https://silicon-tuning.vercel.app)
   metadataBase: new URL('https://nextjs-mdx-blog.loke.dev'),
-  description: 'A modern blog template built with Next.js and MDX',
-  authors: [{ name: 'Your Name' }],
-  creator: 'Your Name',
+  description:
+    'Deep dives into PC hardware, GPU diagnostics, and performance tuning.',
+  authors: [{ name: 'Afnan Naveed' }],
+  creator: 'Afnan Naveed',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://nextjs-mdx-blog.loke.dev',
-    siteName: 'Next.js MDX Blog',
-    title: 'Next.js MDX Blog',
-    description: 'A modern blog template built with Next.js and MDX',
+    url: '/',
+    siteName: 'Silicon Tuning',
+    title: 'Silicon Tuning',
+    description:
+      'Deep dives into PC hardware, GPU diagnostics, and performance tuning.',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Next.js MDX Blog',
+        alt: 'Silicon Tuning',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Next.js MDX Blog',
-    description: 'A modern blog template built with Next.js and MDX',
+    title: 'Silicon Tuning',
+    description:
+      'Deep dives into PC hardware, GPU diagnostics, and performance tuning.',
     images: ['/og-image.png'],
   },
   robots: {
