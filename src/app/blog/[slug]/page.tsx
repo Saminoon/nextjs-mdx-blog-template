@@ -29,9 +29,14 @@ async function loadPost(slug: string) {
       fs.readFile(fullPath, 'utf8'),
     ])
 
+    // Extract the raw frontmatter data directly using gray-matter
+    const { data, content } = matter(fileContents)
+
     return {
       post,
-      content: matter(fileContents).content,
+      content,
+      // Pull author directly from the file so we don't rely on getPostBySlug
+      author: data.author as string | undefined,
     }
   } catch {
     return null
@@ -48,10 +53,7 @@ export default async function BlogPost(props: {
     notFound()
   }
 
-  const { post, content } = result
-
-  // Properly typing the author field to keep the linter happy
-  const author = (post as { author?: string }).author
+  const { post, content, author } = result
 
   return (
     <div className="container mx-auto max-w-4xl px-4 py-12">
