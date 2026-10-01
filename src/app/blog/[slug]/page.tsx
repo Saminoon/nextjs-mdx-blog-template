@@ -50,6 +50,9 @@ export default async function BlogPost(props: {
 
   const { post, content } = result
 
+  // Properly typing the author field to keep the linter happy
+  const author = (post as { author?: string }).author
+
   return (
     <div className="container mx-auto max-w-4xl px-4 py-12">
       <div className="mb-8">
@@ -62,16 +65,26 @@ export default async function BlogPost(props: {
 
         <Card>
           <CardHeader className="pb-4">
-            <h1 className="text-4xl font-bold tracking-tight">{post.title}</h1>
-            {post.date && (
-              <time className="text-muted-foreground text-sm">
-                {new Date(post.date).toLocaleDateString('en-US', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric',
-                })}
-              </time>
-            )}
+            <h1 className="text-4xl font-bold tracking-tight mb-2">
+              {post.title}
+            </h1>
+            <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+              {author && (
+                <>
+                  <span className="font-medium text-foreground">{author}</span>
+                  <span>•</span>
+                </>
+              )}
+              {post.date && (
+                <time dateTime={post.date}>
+                  {new Date(post.date).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                  })}
+                </time>
+              )}
+            </div>
           </CardHeader>
           <Separator />
           <CardContent className="pt-6">
