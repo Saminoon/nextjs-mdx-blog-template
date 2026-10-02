@@ -38,7 +38,7 @@ export const Header = () => {
       <div className="container mx-auto flex h-14 items-center justify-between px-4">
         <div className="mr-4 flex">
           <Link href="/" className="font-bold">
-            Silicon Tuning
+            Hardware Tune
           </Link>
         </div>
         <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">

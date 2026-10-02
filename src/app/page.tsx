@@ -19,14 +19,14 @@ import {
 } from '@/components/ui/card'
 
 export const metadata: Metadata = {
-  title: 'Silicon Tuning | PC Hardware & Optimization',
+  title: 'Hardware Tune | PC Hardware & Optimization',
   description:
     'Deep dives into CPU and GPU pairing, memory frequency tuning, BIOS configurations, and system performance.',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    siteName: 'Silicon Tuning',
-    url: 'https://silicontuning.com',
+    siteName: 'Hardware Tune',
+    url: 'https://hardwaretune.com',
     description:
       'PC hardware reviews, custom build guides, and system optimization tutorials.',
   },
@@ -40,8 +40,8 @@ export default async function Home() {
   const websiteJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Silicon Tuning',
-    url: 'https://silicontuning.com',
+    name: 'Hardware Tune',
+    url: 'https://hardwaretune.com',
     description:
       'Deep dives into CPU and GPU pairing, memory frequency tuning, and BIOS configurations.',
     author: {

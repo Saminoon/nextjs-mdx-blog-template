@@ -27,11 +27,10 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: 'Silicon Tuning',
-    template: '%s | Silicon Tuning',
+    default: 'Hardware Tune',
+    template: '%s | Hardware Tune',
   },
-  // Note: Update this URL to your actual Vercel domain later (e.g., https://silicon-tuning.vercel.app)
-  metadataBase: new URL('https://nextjs-mdx-blog.loke.dev'),
+  metadataBase: new URL('https://hardwaretune.com'),
   description:
     'Deep dives into PC hardware, GPU diagnostics, and performance tuning.',
   authors: [{ name: 'Afnan Naveed' }],
@@ -40,8 +39,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: '/',
-    siteName: 'Silicon Tuning',
-    title: 'Silicon Tuning',
+    siteName: 'Hardware Tune',
+    title: 'Hardware Tune',
     description:
       'Deep dives into PC hardware, GPU diagnostics, and performance tuning.',
     images: [
@@ -49,13 +48,13 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Silicon Tuning',
+        alt: 'Hardware Tune',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Silicon Tuning',
+    title: 'Hardware Tune',
     description:
       'Deep dives into PC hardware, GPU diagnostics, and performance tuning.',
     images: ['/og-image.png'],
