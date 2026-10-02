@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://nextjs-mdx-blog.loke.dev/sitemap.xml',
+    sitemap: 'https://hardwaretune.com/sitemap.xml',
   }
 }
