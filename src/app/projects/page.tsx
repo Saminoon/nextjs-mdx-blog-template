@@ -4,7 +4,7 @@ import { ProjectCard } from '@/components/projectCard'
 import { Animated } from '@/components/ui/animated'
 
 export const metadata = {
-  title: 'PC Builds | Silicon Tuning',
+  title: 'PC Builds | Hardware Tune',
   description:
     'Custom PC rigs optimized for specific games, budgets, and performance targets.',
 }

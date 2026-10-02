@@ -4,8 +4,8 @@ import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 export const metadata = {
-  title: 'About | Silicon Tuning',
-  description: 'About the author of Silicon Tuning.',
+  title: 'About | Hardware Tune',
+  description: 'About the author of Hardware Tune.',
 }
 
 export default function AboutPage() {
@@ -14,7 +14,7 @@ export default function AboutPage() {
       <Animated variants={fadeInSlideUp} className="mb-12">
         <h1 className="text-4xl font-bold tracking-tight mb-4">About Me</h1>
         <p className="text-lg text-muted-foreground">
-          The hardware enthusiast and developer behind Silicon Tuning.
+          The hardware enthusiast and developer behind Hardware Tune.
         </p>
       </Animated>
 
@@ -53,7 +53,7 @@ export default function AboutPage() {
             </CardHeader>
             <CardContent className="space-y-4 text-muted-foreground">
               <p>
-                Welcome to Silicon Tuning. I combine my background in computer
+                Welcome to Hardware Tune. I combine my background in computer
                 science with a deep passion for hardware optimization. Whether
                 it is tweaking BIOS settings for rock-solid 1% lows in Apex
                 Legends, tuning memory frequencies, or putting together custom

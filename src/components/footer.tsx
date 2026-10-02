@@ -9,7 +9,7 @@ export const Footer = () => {
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
           <div className="flex flex-col items-center md:items-start">
             <p className="text-muted-foreground text-sm">
-              &copy; {currentYear} Silicon Tuning. All rights reserved.
+              &copy; {currentYear} Hardware Tune. All rights reserved.
             </p>
           </div>
           <div className="flex gap-4">

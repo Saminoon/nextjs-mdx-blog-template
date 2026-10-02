@@ -2,8 +2,8 @@ import { fadeInSlideUp } from '@/lib/animations'
 import { Animated } from '@/components/ui/animated'
 
 export const metadata = {
-  title: 'Privacy Policy | Silicon Tuning',
-  description: 'Privacy Policy for Silicon Tuning.',
+  title: 'Privacy Policy | Hardware Tune',
+  description: 'Privacy Policy for Hardware Tune.',
 }
 
 export default function PrivacyPage() {
@@ -22,7 +22,7 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-2xl font-semibold mb-3">1. Introduction</h2>
           <p className="text-muted-foreground leading-relaxed">
-            Welcome to Silicon Tuning. This Privacy Policy explains how we
+            Welcome to Hardware Tune. This Privacy Policy explains how we
             collect, use, and protect your information when you visit our
             website. By using our website, you hereby consent to our Privacy
             Policy and agree to its terms.
@@ -34,7 +34,7 @@ export default function PrivacyPage() {
             2. Cookies and Web Beacons
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Like any other website, Silicon Tuning uses "cookies". These cookies
+            Like any other website, Hardware Tune uses "cookies". These cookies
             are used to store information including visitors' preferences, and
             the pages on the website that the visitor accessed or visited. The
             information is used to optimize the users' experience by customizing
@@ -50,7 +50,7 @@ export default function PrivacyPage() {
           <p className="text-muted-foreground leading-relaxed">
             Google is one of a third-party vendor on our site. It also uses
             cookies, known as DART cookies, to serve ads to our site visitors
-            based upon their visit to Silicon Tuning and other sites on the
+            based upon their visit to Hardware Tune and other sites on the
             internet. However, visitors may choose to decline the use of DART
             cookies by visiting the Google ad and content network Privacy Policy
             at the following URL:{' '}
@@ -69,8 +69,8 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-2xl font-semibold mb-3">4. Log Files</h2>
           <p className="text-muted-foreground leading-relaxed">
-            Silicon Tuning follows a standard procedure of using log files.
-            These files log visitors when they visit websites. The information
+            Hardware Tune follows a standard procedure of using log files. These
+            files log visitors when they visit websites. The information
             collected by log files includes internet protocol (IP) addresses,
             browser type, Internet Service Provider (ISP), date and time stamp,
             referring/exit pages, and possibly the number of clicks. These are

@@ -69,7 +69,7 @@ export const Header = () => {
                 <div className="flex-1">
                   <div className="mt-2 mb-8">
                     <SheetTitle className="text-lg font-bold">
-                      <Link href="/">Silicon Tuning</Link>
+                      <Link href="/">Hardware Tune</Link>
                     </SheetTitle>
                   </div>
                   <nav className="flex flex-col space-y-3">

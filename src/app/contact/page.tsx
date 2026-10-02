@@ -4,7 +4,7 @@ import { Animated } from '@/components/ui/animated'
 import { Card, CardContent } from '@/components/ui/card'
 
 export const metadata = {
-  title: 'Contact | Silicon Tuning',
+  title: 'Contact | Hardware Tune',
   description:
     'Get in touch for hardware questions, PC build advice, or business inquiries.',
 }
