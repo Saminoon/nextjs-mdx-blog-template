@@ -43,6 +43,22 @@ async function loadPost(slug: string) {
   }
 }
 
+export async function generateMetadata(props: {
+  params: Promise<{ slug: string }>
+}) {
+  const { slug } = await props.params
+  const result = await loadPost(slug)
+
+  if (!result) {
+    return {}
+  }
+
+  return {
+    title: result.post.title,
+    description: result.post.excerpt,
+  }
+}
+
 export default async function BlogPost(props: {
   params: Promise<{ slug: string }>
 }) {

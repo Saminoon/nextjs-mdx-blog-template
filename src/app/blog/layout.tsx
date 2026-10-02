@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
-export const metadata: Metadata = {
-  title: 'Blog | Next.js MDX Blog',
-  description: 'Articles and thoughts from the blog',
+export const metadata = {
+  title: 'Blog',
+  description: 'Read the latest PC hardware guides and troubleshooting logs.',
 }
 
 export default function BlogLayout({
